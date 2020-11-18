@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+  <header>
+    <div class="title">
+      <img src="./images/logo.svg" alt="logo">
+    </div>
+    <div class="score">
+      <p>Score</p>
+      <span class="player-score"></span>
+      <span class="computer-score"></span>
+    </div>
+  </header>
+  <section class="message">
+
+  </section>
+  <main>
+    <div class="fill">
+      <button class="rock"></button>
+      <button class="paper"></button>
+    </div>
+    <button class="scissors"></button>
+  </main>
+  <footer>
+    <button class="rules">
+      Rules
+    </button>
+  </footer>
+
+  <div class="modal modal-hidden">
+    <div class="modal-content">
+      <div class="modal-close-bar">
+        <p>rules</p>
+        <span>
+          <img src="./images/icon-close.svg" alt="icon-close">
+        </span>
+      </div>
+      <img src="./images/image-rules.svg" alt="image-rules">
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
