@@ -9,6 +9,7 @@ html {
 
 body {
     margin: 0;
+    height: 100%;
 }
 
 header {
@@ -75,7 +76,7 @@ main {
     padding: 70px;
     border: 20px solid green;
     border-radius: 50%;
-    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
     outline-style: none;
 }
 
@@ -90,7 +91,7 @@ main {
     padding: 70px;
     border: 20px solid red;
     border-radius: 50%;
-    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
     outline-style: none;
 }
 
@@ -106,7 +107,7 @@ main {
     margin-left: 30px;
     border: 20px solid yellow;
     border-radius: 50%;
-    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
     outline-style: none;
 }
 
@@ -129,7 +130,7 @@ footer {
 }
 
 .modal {
-    background-color: rgba(0,0,0,0.75);
+    background-color: rgba(0, 0, 0, 0.75);
     position: absolute;
     top: 0;
     height: 100%;
@@ -155,7 +156,7 @@ footer {
     font-weight: bold;
 }
 
-.modal-close-bar span img{
+.modal-close-bar span img {
     cursor: pointer;
 }
 
@@ -179,4 +180,13 @@ footer {
 .message strong {
     color: black;
     text-transform: uppercase;
+}
+
+@media all and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+    .score {
+        padding: 10px 0;
+    }
 }
