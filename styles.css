@@ -2,14 +2,13 @@
 html {
     height: 100%;
     margin: 0;
-    background: radial-gradient(circle at center, rgb(47, 0, 255) 0, rgb(2, 2, 116), rgb(6, 2, 56) 100%);
+    background: radial-gradient(circle at center, rgb(85, 51, 235) 0, rgb(17, 17, 133), rgb(6, 2, 56) 100%);
     font-family: 'Barlow Semi Condensed', sans-serif;
     color: white;
 }
 
 body {
     margin: 0;
-    height: 100%;
 }
 
 header {
@@ -21,14 +20,6 @@ header {
     margin: 5% 25%;
     margin-bottom: 30px;
     padding: 15px 20px;
-}
-
-.title p {
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 0.8;
 }
 
 .score {
@@ -72,7 +63,6 @@ main {
     background-color: white;
     text-transform: uppercase;
     cursor: pointer;
-    font-weight: bold;
     padding: 70px;
     border: 20px solid green;
     border-radius: 50%;
@@ -87,7 +77,6 @@ main {
     background-color: white;
     text-transform: uppercase;
     cursor: pointer;
-    font-weight: bold;
     padding: 70px;
     border: 20px solid red;
     border-radius: 50%;
@@ -102,7 +91,6 @@ main {
     background-color: white;
     text-transform: uppercase;
     cursor: pointer;
-    font-weight: bold;
     padding: 70px;
     margin-left: 30px;
     border: 20px solid yellow;
@@ -114,7 +102,7 @@ main {
 footer {
     margin-top: 10px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .rules {
@@ -125,6 +113,17 @@ footer {
     padding: 10px 30px;
     cursor: pointer;
     margin-right: 50px;
+    border-radius: 5px;
+    outline-style: none;
+}
+
+.play-again {
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin-left: 50px;
     border-radius: 5px;
     outline-style: none;
 }
@@ -182,11 +181,32 @@ footer {
     text-transform: uppercase;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 800px) {
     header {
         flex-direction: column;
     }
     .score {
         padding: 10px 0;
+    }
+    .score span {
+        font-size: 17px;
+    }
+    header, .message {
+        margin-bottom: 20px;
+    }
+    .fill, .fill button, .scissors {
+        margin: 0;
+    }
+    .rock, .paper, .scissors {
+        background-size: 50px;
+        padding: 45px;
+        border-width: 10px;
+    }
+    .scissors {
+        margin-top: -10px;
+        margin-left: 5px;
+    }
+    footer {
+        margin-top: 20px;
     }
 }

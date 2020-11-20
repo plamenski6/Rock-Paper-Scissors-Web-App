@@ -13,7 +13,19 @@ let playerScore = document.querySelector('.player-score');
 let computerScore = document.querySelector('.computer-score');
 let message = document.querySelector('.message');
 let buttons = document.querySelectorAll('main button');
-let winnerScores = [0, 0]
+let buttonPlayAgain = document.querySelector('.play-again');
+let winnerScores
+
+if (sessionStorage.getItem('playerScore') && sessionStorage.getItem('computerScore') && sessionStorage.getItem('message')) {
+    playerScore.innerHTML = sessionStorage.getItem('playerScore');
+    computerScore.innerHTML = sessionStorage.getItem('computerScore');
+    message.innerHTML = sessionStorage.getItem('message');
+    winnerScores = [sessionStorage.getItem('playerPoints'), sessionStorage.getItem('computerPoints')];
+} else {
+    winnerScores = [0, 0];
+}
+
+buttonPlayAgain.addEventListener('click', playAgain);
 
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', playGame);
@@ -48,9 +60,15 @@ function playGame(e) {
     }
 
     playerScore.innerHTML = 'Player: [ ' + winnerScores[0] + ' ] ';
+    sessionStorage.setItem('playerScore', 'Player: [ ' + winnerScores[0] + ' ] ');
+    sessionStorage.setItem('playerPoints', winnerScores[0]);
+
     computerScore.innerHTML = 'Computer: [ ' + winnerScores[1] + ' ]';
+    sessionStorage.setItem('computerScore', 'Computer: [ ' + winnerScores[1] + ' ]');
+    sessionStorage.setItem('computerPoints', winnerScores[1]);
 
     message.innerHTML = 'Player: <strong>' + playerSelection + '</strong> | Computer: <strong>' + computerSelection + '</strong><br>' + result;
+    sessionStorage.setItem('message', 'Player: <strong>' + playerSelection + '</strong> | Computer: <strong>' + computerSelection + '</strong><br>' + result);
 }
 
 function checkWinner(player, computer) {
@@ -81,4 +99,9 @@ function checkWinner(player, computer) {
             return 'Player';
         }
     }
+}
+
+function playAgain() {
+    sessionStorage.clear();
+    window.location.reload();
 }
