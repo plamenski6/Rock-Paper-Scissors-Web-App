@@ -1,5 +1,7 @@
 # Frontend Mentor - Rock, Paper, Scissors
 
+Deploying project using Vercel: https://rock-paper-scissors-web-app.vercel.app
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
